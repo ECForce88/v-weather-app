@@ -8,14 +8,52 @@
     <link rel="stylesheet" href="src/style.css">
     <title>V-WeatherApp_W7</title>
 </head>
-<body>
-    <div class="container">
-    <H1>Vanilla Weather App</H1>
-    <a href="" class="btn btn-primary">CLICK</a>
 
-
-
-</div>
-<script>src="src/script.js"</script>
+<body cz-shortcut-listen="true">
+        <div id="app"></div>
+        <div class="container p-5 border border-2 border-info shadow lg mb-2 bg-body">
+          <form class="mb-3" id="search-form">
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder="Enter city name" id="city-input">
+              <button class="geoLocation btn btn-primary mx-2 rounded" type="submit">
+                Search
+              </button>
+              <button type="button" class="btn btn-success" id="local-button">
+                My Location
+              </button>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-6">
+              <h1 class="b-1" id="city-name"><strong> (Current City Name) </strong></h1>
+              <h2 class="date text-left">Sunday, January 15, 18:38</h2>
+              <h2 class="condition pt-1">(Current Condition)</h2>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-6 d-inline-flex mt-3">
+              <img class="w-50 p-0 pb-10px" src="cloudy.svg" alt="clouds">
+              <h3 class="my-auto" id="tempValue">17</h3>
+              <span class="tempUnit">
+                <p class="pt-3">
+                  <span class="celsius"><a href="#" id="c-ink">ºC</a></span> /
+                  <span class="fahrenheit"><a href="#" id="f-link">ºF</a></span>
+                </p>
+              </span>
+            </div>
+            <div class="col-6 pt-4 mt-3">
+              <ul>
+                <li id="precip">Precipitation: 0%</li>
+                <li id="humidity">Humidity: 77%</li>
+                <li id="wind-speed">Wind: 8 km/h</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <a href="https://github.com/ECForce88/Plus_H5" target="_blank">Open-source code by<span class="ecf"><strong> Elizabeth Forstmann</strong></span></a>
+        </footer>
+        <script src="script.js"></script>
 </body>
 </html>
